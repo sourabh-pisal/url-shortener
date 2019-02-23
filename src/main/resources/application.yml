@@ -1,1 +1,16 @@
-
+server:
+  port: "8000"
+spring:
+  data:
+    mongodb:
+      port: "27017"
+      username: "mongo"
+      password: "r34N31u"
+  main:
+    banner-mode: "off"
+  application:
+    name: "URL Shortener"
+logging:
+  level:
+    root: "error"
+    springprojects: "debug"
