@@ -1,14 +1,11 @@
 package springprojects.urlshortener.repository;
 
-import org.springframework.data.repository.reactive.ReactiveCrudRepository;
-import org.springframework.stereotype.Repository;
-import reactor.core.publisher.Mono;
+import org.springframework.data.mongodb.repository.MongoRepository;
 import springprojects.urlshortener.model.Url;
 
-@Repository
-public interface UrlRepository extends ReactiveCrudRepository<Url, String> {
+import java.util.Optional;
 
-    Mono<Url> findFirstByShortUrl(String shortUrl);
-
-    Mono<Url> findFirstByLongUrl(String longUrl);
+public interface UrlRepository extends MongoRepository<Url, String> {
+    Optional<Url> findFirstByShortUrl(String shortUrl);
+    Optional<Url> findFirstByLongUrl(String longUrl);
 }

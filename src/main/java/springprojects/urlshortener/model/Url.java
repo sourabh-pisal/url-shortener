@@ -6,15 +6,15 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @EqualsAndHashCode(exclude = {"id"})
 @ToString(exclude = {"id"})
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
 @Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 @Document
 public class Url {
     @Id
     private String id;
     private String shortUrl;
     private String longUrl;
-    private Long numberOfHits;
+    private long numberOfHits;
 }

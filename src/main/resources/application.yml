@@ -3,13 +3,4 @@ server:
 spring:
   data:
     mongodb:
-      port: 27017
       database: url_shortener
-  main:
-    banner-mode: "off"
-  application:
-    name: "URL Shortener"
-logging:
-  level:
-    root: error
-    springprojects: debug
